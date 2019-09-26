@@ -1,0 +1,9 @@
+
+
+启用防火墙80端口
+
+
+安装gcc gcc-c++
+yum install gcc gcc-c++
+
+安装wget

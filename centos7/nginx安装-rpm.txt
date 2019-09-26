@@ -1,0 +1,2 @@
+wget http://nginx.org/packages/centos/7/x86_64/RPMS/nginx-1.16.0-1.el7.ngx.x86_64.rpm
+然后执行 rpm -ivh nginx-1.16.0-1.el7.ngx.x86_64.rpm

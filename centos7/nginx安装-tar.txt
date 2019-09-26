@@ -1,0 +1,33 @@
+nginx源码安装需要用到pcre和zlib, 下载到/usr/local/src/目录下
+cd /usr/local/src/
+
+wget http://nginx.org/download/nginx-1.16.0.tar.gz
+wget https://ftp.pcre.org/pub/pcre/pcre-8.43.tar.gz
+wget http://zlib.net/zlib-1.2.11.tar.gz
+
+tar -zxvf nginx-1.16.0.tar.gz
+tar -zxvf pcre-8.43.tar.gz
+tar -zxvf zlib-1.2.11.tar.gz
+
+安装pcre
+cd /usr/local/src/pcre-8.43
+./configure --prefix=pcre
+make
+make install
+
+安装zlib
+cd /usr/local/src/zlib-1.2.11
+./configure --prefix=zlib
+make
+make install
+
+安装nginx
+cd /usr/local/src/nginx-1.16.0
+./configure --prefix=/usr/local/nginx \
+--with-pcre=/usr/local/src/pcre-8.43 \
+--with-zlib=/usr/local/src/zlib-1.2.11
+make 
+make install
+
+./configure --with-pcre=/usr/local/src/pcre-8.43 \
+--with-zlib=/usr/local/src/zlib-1.2.11

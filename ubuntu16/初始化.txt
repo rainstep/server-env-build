@@ -1,0 +1,18 @@
+设置root密码
+sudo passwd root
+
+更新软件信息数据库 
+sudo apt-get update
+
+查找软件包
+apt-cache search xxx
+
+安装openssh-server
+apt-get install openssh-server
+
+启用root用户ssh登录
+打开/etc/ssh/sshd_config, 把PermitRootLogin的值改为yes
+sudo vi /etc/ssh/sshd_config
+
+重启sshd服务
+sudo service ssh restart

@@ -1,0 +1,10 @@
+rpm命令
+安装 rpm -ivh
+升级 rpm -Uvh
+查询 rpm -q
+卸载
+rpm -qa | grep 包名
+rpm -e
+
+源码安装命令
+configure、make、make install
