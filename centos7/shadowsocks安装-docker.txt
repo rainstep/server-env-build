@@ -1,0 +1,21 @@
+docker pull shadowsocks/shadowsocks-libev
+docker run -e PASSWORD=<password> -p<server-port>:8388 -p<server-port>:8388/udp -d shadowsocks/shadowsocks-libev
+
+
+
+docker run -e PASSWORD=liu123456 \
+-e SERVER_ADDR=207.246.100.21 \
+-e METHOD=aes-256-cfb \
+-p 8388:8388 -p 8388:8388/udp -d --restart always shadowsocks/shadowsocks-libev
+
+ssserver -c /etc/shadowsocks/config.json -d start
+
+ssserver -c /etc/shadowsocks/config.json -d stop
+
+
+docker run  --name ss-libev \
+-p8388:8388 -p8388:8388/udp \
+-e PASSWORD=liu123456 \
+-e SERVER_HOST=207.246.100.21 \
+-e ENCRYPT=aes-256-cfb \
+-d shadowsocks/shadowsocks-libev

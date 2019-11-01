@@ -1,0 +1,14 @@
+
+$docker run -d -it  image_name
+
+
+docker exec -t -i <id/container_name>  /bin/bash
+
+docker attach <id、container_name>
+
+docker cp Name:/container_path to_path
+
+docker stop Name/ID  
+docker start Name/ID  
+docker kill Name/ID  
+docker restart name/ID
