@@ -14,3 +14,6 @@ docker run --name tomcat \
 -p 8080:8080 \
 -v /home/tomcat/webapps:/usr/local/tomcat/webapps \
 -d tomcat:8.5-jdk8-corretto
+
+
+docker run --name tomcat -p 9090:9090 -d tomcat:8.5-jdk8-corretto
