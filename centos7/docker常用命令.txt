@@ -1,14 +1,54 @@
 
-$docker run -d -it  image_name
+一、服务操作
+启动 systemctl start docker
+重启 systemctl restart docker
+停止 systemctl stop docker
+查询状态 systemctl status docker
 
+systemctl可以换成service,例如：service docker start
 
+二、 镜像操作
+查看当前下载的镜像
+docker images
+
+搜索镜像
+docker search 关键字
+
+下载镜像
+docker pull 镜像名
+下载指定版本镜像
+到https://hub.docker.com/找到对应tag
+docker pull 镜像名:tag
+
+删除镜像
+docker rmi 镜像名：
+删除单个：docker rmi -f 镜像ID。
+删除多个：docker rmi -f 镜像名1:TAG 镜像名2:TAG 。
+删除全部：docker rmi -f $(docker images -qa)。
+
+三、容器操作
+查看当前运行的所有容器
+docker ps
+
+查看所有容器
+docker ps -a
+
+启动容器
+docker run -d -it  image_name
+
+在容器内执行命令
 docker exec -t -i <id/container_name>  /bin/bash
 
+进入容器
 docker attach <id、container_name>
 
+在容器中复制文件
 docker cp Name:/container_path to_path
 
+启动/停止/杀死/重启/删除容器
 docker stop Name/ID  
 docker start Name/ID  
 docker kill Name/ID  
 docker restart name/ID
+docker rm Name/ID
+

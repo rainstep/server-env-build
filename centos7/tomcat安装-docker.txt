@@ -1,0 +1,16 @@
+
+mkdir -p /home/tomcat/webapps /home/tomcat/logs /home/tomcat/conf
+
+docker run --name tomcat \
+-p 8080:8080 \
+-v /home/tomcat/webapps:/usr/local/tomcat/webapps \
+-v /home/tomcat/logs:/usr/local/tomcat/logs \
+-v /home/tomcat/conf:/usr/local/tomcat/conf \
+-d tomcat:8.5-jdk8-corretto
+
+
+简单安装
+docker run --name tomcat \
+-p 8080:8080 \
+-v /home/tomcat/webapps:/usr/local/tomcat/webapps \
+-d tomcat:8.5-jdk8-corretto
