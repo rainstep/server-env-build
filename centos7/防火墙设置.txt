@@ -46,5 +46,5 @@ firewall-cmd --zone=public --remove-port=80/tcp --permanent
 ningx 80
 mysql 3306
 redis 6379
-rabbitmq 5672
+rabbitmq 5672 15672
 mongodb 27017
