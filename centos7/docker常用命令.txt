@@ -40,7 +40,7 @@ docker ps -a
 docker run -d -it  image_name
 
 在容器内执行命令
-docker exec -t -i <id/container_name>  /bin/bash
+docker exec -it <id/container_name>  /bin/bash
 
 进入容器
 docker attach <id、container_name>
