@@ -3,6 +3,7 @@
 
 mkdir -p /home/nginx
 
+复制需要的文件到宿主机
 docker run --name temp-nginx -d nginx
 docker cp temp-nginx:/etc/nginx/nginx.conf /home/nginx/nginx.conf
 docker cp temp-nginx:/etc/nginx/conf.d/ /home/nginx/conf.d

@@ -3,10 +3,8 @@
 mkdir -p /home/tomcat/logs
 
 docker run --name temp-tomcat -d tomcat:8.5-jdk8-corretto
-
 docker cp temp-tomcat:/usr/local/tomcat/webapps.dist /home/tomcat/webapps
 docker cp temp-tomcat:/usr/local/tomcat/conf /home/tomcat/conf
-
 docker rm -f temp-tomcat
 
 docker run --name tomcat \
