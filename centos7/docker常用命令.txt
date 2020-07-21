@@ -55,3 +55,6 @@ docker kill Name/ID
 docker restart name/ID
 docker rm Name/ID
 
+
+容器重命名
+docker rename

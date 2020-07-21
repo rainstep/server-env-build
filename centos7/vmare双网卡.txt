@@ -1,0 +1,12 @@
+vmare双网卡
+
+nmcli connection add type ethernet con-name ens37 ifname ens37
+
+查看网卡UUID
+nmcli con show
+
+https://www.cnblogs.com/djlsunshine/p/9733182.html
+
+
+
+

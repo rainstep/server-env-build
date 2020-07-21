@@ -13,11 +13,10 @@ sudo yum remove docker \
 
 sudo yum install -y yum-utils
 
-sudo yum-config-manager \
-    --add-repo \
+sudo yum-config-manager --add-repo \
     https://download.docker.com/linux/centos/docker-ce.repo
 
-sudo yum install docker-ce docker-ce-cli containerd.io
+sudo yum install -y docker-ce docker-ce-cli containerd.io
 
 配置国内镜像
 mkdir -p /etc/docker
@@ -39,4 +38,13 @@ sudo systemctl start docker
 
 运行hello-world镜像
 sudo docker run hello-world
+
+
+拉取常用镜像
+nginx
+tomcat:8.5-jdk8-corretto
+mysql:5.7
+redis
+rabbitmq:management
+mongo
 
