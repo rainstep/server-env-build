@@ -1,0 +1,12 @@
+
+docker run -d --name gitlab \
+  -p 443:443 --publish 8929:80 -p 2289:22 \
+  --hostname 10.0.0.55 \
+  --restart always \
+  -v /home/gitlab/config:/etc/gitlab \
+  -v /home/gitlab/logs:/var/log/gitlab \
+  -v /home/gitlab/data:/var/opt/gitlab \
+  gitlab/gitlab-ce
+
+
+ https://about.gitlab.com/install/#centos-7

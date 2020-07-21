@@ -1,0 +1,16 @@
+21 ftp
+22 ssh
+23 telnet
+25 smtp
+80 nginx
+1433 mssql
+1521 oracle
+3306 mysql
+5432 PostgreSQL
+5672 rabbitmq
+6379 redis
+8080 tomcat
+8081 nexus
+15672 rabbitmq
+27017 mongodb
+
